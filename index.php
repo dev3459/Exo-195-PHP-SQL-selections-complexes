@@ -38,12 +38,12 @@ $request = $db->prepare("SELECT * FROM user WHERE nom='Conor'");
 $request->execute();
 
 foreach ($request->fetchAll() as $user){ ?>
-            <div class="userList">
-                <p>Monsieur/Madame : <?= $user['nom'] ?> <?= $user['prenom'] ?></p>
-                <p>Habite à <?= $user['ville'] ?> code postal <?= $user['code_postal'] ?> dans le pays <?= $user['pays'] ?></p>
-                <p>Son adresse est : <?= $user['numero'] ?> <?= $user['rue'] ?></p>
-                <p>Vous pouvez le/la contacter à l'adresse mail suivant : <?= $user['mail'] ?></p>
-            </div>
+    <div class="userList">
+        <p>Monsieur/Madame : <?= $user['nom'] ?> <?= $user['prenom'] ?></p>
+        <p>Habite à <?= $user['ville'] ?> code postal <?= $user['code_postal'] ?> dans le pays <?= $user['pays'] ?></p>
+        <p>Son adresse est : <?= $user['numero'] ?> <?= $user['rue'] ?></p>
+        <p>Vous pouvez le/la contacter à l'adresse mail suivant : <?= $user['mail'] ?></p>
+    </div>
 <?php }
 /* 2. Sélectionnez et affichez tous les utilisateurs dont le prénom est différent de 'John' */
 // TODO Votre code ici.
